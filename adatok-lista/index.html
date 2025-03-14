@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <form>
+      <label for="firstname">Keresztnév:</label><br>
+      <input type="text" id="firstname" /><br>
+      <label for="lastname">Vezetéknév:</label><br>
+      <input type="text" id="lastname" /><br>
+      <label for="job">Munka:</label><br>
+      <select id="job">
+        <option value="fejlesztő">Fejlesztő</option>
+        <option value="tesztelő">Tesztelő</option>
+        <option value="üzemeltető">Üzemeltető</option>
+      </select><br>
+      <label for="phone">telefonszam</label><br>
+      <input type="text" id="phone" /><br>
+      <label for="email">email</label><br>
+      <input type="text" id="email" /><br>
+      <button id="felvetel">felvetel</button>
+
+    </form>
+    <div id="adatmegjelenites"></div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
