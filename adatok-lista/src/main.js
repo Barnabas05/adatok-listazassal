@@ -5,6 +5,8 @@ const loading = async () => {
   return json;
 }
 
+//lista
+/*
 const lista = (datas) => {
   document.getElementById("adatmegjelenites").innerText = "";
   const szamozottLista = document.createElement("ul");
@@ -14,6 +16,41 @@ const lista = (datas) => {
     szamozottLista.appendChild(li);
   });
   document.getElementById("adatmegjelenites").append(szamozottLista);
+}
+*/
+//tablazattal
+
+const lista = (datas) => {
+  document.getElementById("adatmegjelenites").innerText = "";
+  const table = document.createElement("table");
+  table.setAttribute("border", "1");
+  table.setAttribute("cellpadding", "10");
+  const header = table.createTHead();
+  const row = header.insertRow();
+  const cell1 = row.insertCell();
+  const cell2 = row.insertCell();
+  const cell3 = row.insertCell();
+  const cell4 = row.insertCell();
+  const cell5 = row.insertCell();
+  cell1.innerHTML = "<b>Vezetéknév</b>";
+  cell2.innerHTML = "<b>Keresztnév</b>";
+  cell3.innerHTML = "<b>Foglalkozás</b>";
+  cell4.innerHTML = "<b>Email</b>";
+  cell5.innerHTML = "<b>Telefonszám</b>";
+  datas.forEach(data => {
+    const row = table.insertRow();
+    const cell1 = row.insertCell();
+    const cell2 = row.insertCell();
+    const cell3 = row.insertCell();
+    const cell4 = row.insertCell();
+    const cell5 = row.insertCell();
+    cell1.textContent = data.lastname;
+    cell2.textContent = data.firstname;
+    cell3.textContent = data.job;
+    cell4.textContent = data.email;
+    cell5.textContent = data.phone;
+  });
+  document.getElementById("adatmegjelenites").append(table);
 }
 
 const adatfelvetel = async (e) => {
