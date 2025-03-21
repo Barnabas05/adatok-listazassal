@@ -80,6 +80,12 @@ const adatfelvetel = async (e) => {
     return;
   }  
   document.getElementById("adatmegjelenites").innerText = "";
+  document.getElementById("firstname").value = "";
+  document.getElementById("lastname").value = "";
+  document.getElementById("job").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("phone").value = "";
+  
   lista(await loading());
 }
 
